@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="style.css">
+      <title>Accueil</title>
+      <meta charset="utf-8">
+    </head>
+        <body>
+          <header>
+            <nav>
+              <ul class="topnav">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#gallery">Galerie Photos</a></li>
+                <li><a href="#">A Propos</a></li>
+              </ul>
+            </nav>
+          </header>
+          <!-- Slideshow container -->
+            <div class="slideshow-container">
+  <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <img src="img/montage.jpg" style="width:100%">
+              <div class="text"><h1>Mountain</h1></div>
+              </div>
+              <div class="mySlides fade">
+                <img src="img/montage2.jpg" style="width:100%">
+                <div class="text"><h1>Forest</h1></div>
+              </div>
+              <div class="mySlides fade">
+                <img src="img/montage3.jpg" style="width:100%">
+                <div class="text"><h1>Lake</h1></div>
+              </div>
+  <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+  <!-- Partie Présentation -->
+              <hr>
+              <section>
+
+                <div class="presentation" id="presentation">
+                  <div class="image">
+                    <img src="img/rando.jpg">
+                  </div>
+                  <div class="texte">
+                    <p>
+                    Voluntatibus ratio ne quid quid par affluentior ne sit vera enim nec datorum sententia ad.
+                    Voluntatibus ratio ne quid quid par affluentior ne sit vera enim nec datorum sententia ad.
+                    Voluntatibus ratio ne quid quid par affluentior ne sit vera enim nec datorum sententia ad.
+                    Voluntatibus ratio ne quid quid par affluentior ne sit vera enim nec datorum sententia ad.
+                    Voluntatibus ratio ne quid quid par affluentior ne sit vera enim nec datorum sententia ad.
+                    Voluntatibus ratio ne quid quid par affluentior ne sit vera enim nec datorum sententia ad.
+                    Voluntatibus ratio ne quid quid par affluentior ne sit vera enim nec datorum sententia.
+                   </p>
+                  </div>
+                </div>
+              </section>
+              <div class="parallax"></div>
+              <ul class="flex-container" id="gallery">
+                  <li class="flex-item">
+                      <img src="img/gallery.jpeg">
+                  </li>
+                  <li class="flex-item">
+                      <img src="img/gallery2.jpg">
+                  </li>
+                  <li class="flex-item">
+                      <img src="img/gallery3.jpg">
+                  </li>
+                  <li class="flex-item">
+                      <img src="img/gallery4.jpg">
+                  </li>
+                  <li class="flex-item">
+                      <img src="img/gallery2.jpg">
+                  </li>
+                   <li class="flex-item">
+                      <img src="img/gallery3.jpg">
+                  </li>
+              </ul>
+                <footer>
+                  <div class="footer">
+                    <div class="mentions">
+                      <p>
+                        Lorem ipsum.<br/>
+                        Lorem ipsum.
+                      </p>
+                    </div>
+                    <div class="contact">
+                      <p>
+                        Lorem ipsum.<br/>
+                        Lorem ipsum.
+                      </p>
+                    </div>
+                    <ul class="menu">
+                      <p>
+                      Lorem ipsum.<br/>
+                      Lorem ipsum.
+                      </p>
+                    </ul>
+                  </div>
+                </footer>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  </body>
+</html>
